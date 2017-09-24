@@ -14,5 +14,7 @@ menu.addEventListener('click', function() {
 })
 
 overlay.addEventListener('click', function() {
-
+        menu.classList.remove('pressed');
+        overlay.classList.remove('open');
+        nav.classList.remove('open');
 })

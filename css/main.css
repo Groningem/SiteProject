@@ -1,10 +1,11 @@
-@font-face{
+@font-face {
     font-family: PoiretOne;
-    src: url('fonts/PoiretOne-Regular.woff2')
+    src: url('../fonts/PoiretOne-Regular.woff2')
         format('woff2'),
-         url('fonts/PoiretOne-Regular.woff')
+         url('../fonts/PoiretOne-Regular.woff')
         format('woff');
 }
+
 html, body {
     height: 100%;
     box-sizing: border-box;
@@ -12,9 +13,25 @@ html, body {
     outline: none !important;
     font-display: optional;
     background: #182d40;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
-body::-webkit-scrollbar {
-
+::-webkit-scrollbar {
+    width: 7px;
+    background: #eee;
+}
+::-webkit-scrollbar-track {
+    border-radius: 20px;
+    background: #eee;
+}
+::-webkit-scrollbar-thumb {
+    width: 5px;
+    background: rgba(139, 139, 139, 0.71);
+    border-radius: 20px;
+    transition: 0.3s cubic-bezier(1, -0.02, 1, .99);
+}
+::-webkit-scrollbar-thumb:active {
+    background: #333;
 }
 * {
     box-sizing: border-box;
@@ -24,6 +41,12 @@ body::-webkit-scrollbar {
 }
 *:focus{
     border: 0.5px solid rgba(0,0,0,.2);
+}
+main {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 100%;
 }
 img {
     color:#eee;
@@ -46,7 +69,7 @@ img {
     height: 10vh;
     min-height: 65px;
     width: 100%;
-    background: rgba(120,120,120,.3);
+    background: rgba(57, 69, 83, 0.6);
     position: fixed;
     z-index: 2;
     top: 0;
@@ -61,8 +84,8 @@ img {
     padding: 15px 20px;
     border-radius: 4px;
     text-decoration: none;
-    color: #f89037;
-    border: 3px solid #f89037;
+    color: #5590ff;
+    border: 3px solid #5590ff;
     font-weight: 500;
     font-size: 20px;
     transition: 0.5s cubic-bezier(.87, .12, 1, 1.04);
@@ -71,13 +94,45 @@ img {
 
 .nav__item:hover {
     color: #eee;
-    background: #f89037;
+    background: #5590ff;
     box-shadow: 20px 20px 5px rgba(0,0,0,.1), 1px 1px 5px rgba(0,0,0,.1), 5px 5px 5px rgba(0,0,0,.1), 10px 10px 5px rgba(0,0,0,.1), 15px 15px 5px rgba(0,0,0,.1);
+}
+.hamburger {
+    display: none;
 }
 .headimg {
     width: 100vw;
     height: 45vw;
     margin: 0;
+    background: #ed4848 url('../img/Header_Kirgisia.jpg');
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0 3px 30px rgba(0,0,0,.5);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-end;
+    margin: auto;
+    text-align: center;
+}
+.headtxt {
+    font-family: PoiretOne,  sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: white;
+    text-shadow: 3px 3px #999;
+}
+@media only screen and (max-width: 1367px) {
+    .headimg {
+        background-position: top center;
+        background-size: contain;
+        height: 50vw;
+    }
+    .headtxt {
+        font-size: 40px;
+    }
 }
 @media only screen and (max-width: 767px) {
     .overlay{
@@ -86,8 +141,8 @@ img {
         margin: 0;
         width: 99.5%;
         height: 100%;
+        filter: blur(20px);
         background: rgba(0,0,0,.4);
-        filter: blur(10px);
         -webkit-filter: blur(10px);
         z-index: 1;
         transition: 0.6s cubic-bezier(1, -0.11, 1, 1.01);
@@ -102,6 +157,7 @@ img {
         min-height: 470px;
         align-items: baseline;
         justify-content: flex-start;
+        background: rgba(80,80,40,.8);
         left: -60%;
         transition: 0.4s cubic-bezier(.68, .13, 1, 1.01);
     }
@@ -176,5 +232,8 @@ img {
     }
     .hamburger.pressed p:last-child{
         opacity: 0;
+    }
+    .headtxt {
+        font-size: 30px;
     }
 }
