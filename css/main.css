@@ -63,7 +63,7 @@ img {
     flex-flow: row nowrap;
     justify-content: space-around;
     align-items: stretch;
-    height: 10vh;
+    height: 100vh;
     min-height: 65px;
     width: 100%;
     background: rgba(57, 69, 83, 0.6);
@@ -72,26 +72,55 @@ img {
     top: 0;
 }
 .nav__item-ico{
-    width: 20vh;
+    margin: auto;
+    text-align: center;
+/*    padding: 40px 40px;*/
+    width: 20vw;
+    height: 20vh;
     min-width: 120px;
     cursor: alias;
 }
+.nav__item-ico > .headtxt{
+        font-size: 120px;
+}
 .nav__item {
     margin: auto;
-    padding: 15px 20px;
+    height: 20vh;
+    width: 10%;
+    padding: 50px 5px;
     border-radius: 4px;
     text-decoration: none;
+    word-wrap: break-word;
     color: #5590ff;
     border: 3px solid #5590ff;
-    font-weight: 500;
-    font-size: 20px;
+    font-weight: 700;
+    font-size: 30px;
     transition: 0.5s cubic-bezier(.87, .12, 1, 1.04);
     background: rgba(136, 75, 0, 0.1);
+    text-shadow: 10px 10px 10px #000;
+}
+.nav__item-1:hover{
+    background: url('../img/nav__item-bg1.jpg');
+    background-position: center center;
+    background-attachment: local;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.nav__item-2{
+    
+}
+
+.nav__item-3{
+    
+}
+
+.nav__item-4{
+    
 }
 
 .nav__item:hover {
     color: #eee;
-    background: #5590ff;
     box-shadow: 20px 20px 5px rgba(0,0,0,.1), 1px 1px 5px rgba(0,0,0,.1), 5px 5px 5px rgba(0,0,0,.1), 10px 10px 5px rgba(0,0,0,.1), 15px 15px 5px rgba(0,0,0,.1);
 }
 .hamburger {
@@ -99,7 +128,7 @@ img {
 }
 .headimg {
     width: 100vw;
-    height: 45vw;
+    height: 100vh;
     margin: 0;
     background: #ed4848 url('../img/Header_Kirgisia.jpg');
     background-position: center center;
