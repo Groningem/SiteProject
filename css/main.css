@@ -151,10 +151,10 @@ img {
     width: 100vw;
     height: 100vh;
     margin: 0;
-    background: #ed4848 url('../img/Header_Kirgisia.jpg');
+    background: #292929 url('../img/header.png');
     background-position: center center;
     background-attachment: fixed;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     box-shadow: 0 3px 30px rgba(0,0,0,.5);
     display: flex;
@@ -230,11 +230,6 @@ img {
     }
     .headimg{
         height: 95vh;
-        background: url('../img/header__mobile.png');
-        background-position: center center;
-        background-attachment: fixed;
-        background-size: cover;
-        background-repeat: no-repeat;
     }
     .hamburger {
         display: flex;
